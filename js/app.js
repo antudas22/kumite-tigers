@@ -12,17 +12,22 @@ function display(nameList){
         <th>${i + 1}</th>
         <td>${name}</td>
         `;
+
         playersList.appendChild(tr);
+
     }
 }
 
 function addToList(element){
+
+    element.disabled = true;
 
     const playerName = element.parentNode.children[0].innerText;
 
     const nameObject = {
         playerName: playerName
     }
+    
     playersNameHolder.push(nameObject);
 
     if(playersNameHolder.length > 5){
