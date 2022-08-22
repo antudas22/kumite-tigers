@@ -21,7 +21,7 @@
             padding-right: 0;
             padding-left: 0
         }
-        h5{
+        h5, h4{
             color: white;
         }
         p{
@@ -31,6 +31,9 @@
             color: white;
             font-size: 20px;
 
+        }
+        input{
+            width: 120px;
         }
         
     </style>
@@ -55,7 +58,9 @@
     </header>
 
     <!-- Main Section -->
-    <main class="">
+    <main>
+
+        <!-- Card Section -->
         <div class="d-flex container justify-content-center">
             <div id="all-cards" class="d-grid col-9 pt-5">
                 <div class="row gap-3 mb-3">
@@ -169,8 +174,32 @@
                         <!-- Player Budget Card -->
                         <div class="row">
                             <div class="col">
-                                <div class="card my-card"  style="min-height: 450px;">
+                                <div class="card my-card">
                                     <h4 class="text-center mt-3" style="color: white;">Budget</h4>
+                                    <div class="m-3">
+                                        <div class="d-flex justify-content-between">
+                                            <div><h4>Per Player</h4></div>
+                                            <div><input type="text"></div>
+                                        </div>
+                                        <div class="d-flex justify-content-center m-3">
+                                            <button class="btn btn-primary fs-5 fw-semibold px-5">Calculate</button>
+                                        </div>
+                                        <div class="d-flex justify-content-between m-3"><h5>Player Expenses</h5> <h5>$<span>00</span></h5></div>
+                                        <div class="d-flex justify-content-between mt-3">
+                                            <div><h4>Manager</h4></div>
+                                            <div><input type="text"></div>
+                                        </div>
+                                        <div class="d-flex justify-content-between mt-3">
+                                            <div><h4>Coach</h4></div>
+                                            <div><input type="text"></div>
+                                        </div>
+                                        <div class="d-flex justify-content-center m-3">
+                                            <button class="btn btn-primary fs-5 fw-semibold px-5">Calculate Total</button>
+                                        </div>
+                                        <div class="d-flex justify-content-between m-3"><h5>Total</h5> <h5>$<span>00</span></h5></div>
+
+                                    </div>
+
                                 </div>
                               </div>
                         </div>

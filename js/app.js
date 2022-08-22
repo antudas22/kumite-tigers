@@ -24,5 +24,11 @@ function addToList(element){
     }
     playersNameHolder.push(nameObject);
 
+    if(playersNameHolder.length > 5){
+        alert('Please select only 5 players!');
+        return;
+    }
+
     display(playersNameHolder);
+    
 }
