@@ -1,3 +1,4 @@
+// Select List
 const playersNameHolder = [];
 
 function display(nameList){
@@ -30,5 +31,35 @@ function addToList(element){
     }
 
     display(playersNameHolder);
-    
 }
+
+// Budget List
+// Common function for input
+function inputStringToNumber(number){
+    const inputField = document.getElementById(number);
+    const inputFieldString = inputField.value;
+    const inputNumber = parseInt(inputFieldString);
+    return inputNumber;
+}
+document.getElementById('btn-calculate').addEventListener('click', function(){
+    const perPlayerField = inputStringToNumber('per-player-field');
+
+    const playersLength = playersNameHolder.length;
+    const calculationExpenses = perPlayerField * playersLength;
+    const playerExpenses = document.getElementById('player-expenses');
+    playerExpenses.innerText = calculationExpenses;
+})
+
+document.getElementById('btn-total-cost').addEventListener('click', function(){
+    const playerExpenses = document.getElementById('player-expenses');
+    const playerExpensesString = playerExpenses.innerText;
+    const playerExpensesAmount = parseInt(playerExpensesString);
+
+    const managerField = inputStringToNumber('manager-field');
+    const coachField = inputStringToNumber('coach-field');
+
+    const totalCost = playerExpensesAmount + managerField + coachField;
+
+    const totalFinalAmount = document.getElementById('total-amount');
+    totalFinalAmount.innerText = totalCost;
+})
