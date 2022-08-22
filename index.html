@@ -27,6 +27,11 @@
         p{
             color: #B3B3B3;
         }
+        th, td{
+            color: white;
+            font-size: 20px;
+
+        }
         
     </style>
 
@@ -52,14 +57,14 @@
     <!-- Main Section -->
     <main class="">
         <div class="d-flex container justify-content-center">
-            <div class="d-grid col-9 pt-5">
+            <div id="all-cards" class="d-grid col-9 pt-5">
                 <div class="row gap-3 mb-3">
                     <div class="col card my-card">
                         <img src="images/Rafael Aghayev.jfif" class="card-img-top" alt="...">
                         <div class="card-body">
                           <h5 class="card-title">Rafael Aghayev</h5>
                           <p class="card-text">Azerbaijan</p>
-                          <button class="btn btn-primary fs-5 fw-semibold px-5">Select</button>
+                          <button onclick="addToList(this)" class="btn btn-primary fs-5 fw-semibold px-5">Select</button>
                         </div>
                       </div>
                     <div class="col card my-card">
@@ -67,7 +72,7 @@
                         <div class="card-body">
                           <h5 class="card-title">Stanislav Horuna</h5>
                           <p class="card-text">Ukraine</p>
-                          <button class="btn btn-primary fs-5 fw-semibold px-5">Select</button>
+                          <button onclick="addToList(this)" class="btn btn-primary fs-5 fw-semibold px-5">Select</button>
                         </div>
                       </div>
                     <div class="col card my-card">
@@ -75,7 +80,7 @@
                         <div class="card-body">
                           <h5 class="card-title">Luigi Busa</h5>
                           <p class="card-text">Italy</p>
-                          <button class="btn btn-primary fs-5 fw-semibold px-5">Select</button>
+                          <button onclick="addToList(this)" class="btn btn-primary fs-5 fw-semibold px-5">Select</button>
                         </div>
                       </div>
                 </div>
@@ -86,7 +91,7 @@
                         <div class="card-body">
                           <h5 class="card-title">Erman Eltemur</h5>
                           <p class="card-text">Turkey</p>
-                          <button class="btn btn-primary fs-5 fw-semibold px-5">Select</button>
+                          <button onclick="addToList(this)" class="btn btn-primary fs-5 fw-semibold px-5">Select</button>
                         </div>
                       </div>
                     <div class="col card my-card">
@@ -94,7 +99,7 @@
                         <div class="card-body">
                           <h5 class="card-title">Gabor Harspataki</h5>
                           <p class="card-text">Hungary</p>
-                          <button class="btn btn-primary fs-5 fw-semibold px-5">Select</button>
+                          <button onclick="addToList(this)" class="btn btn-primary fs-5 fw-semibold px-5">Select</button>
                         </div>
                       </div>
                     <div class="col card my-card">
@@ -102,7 +107,7 @@
                         <div class="card-body">
                           <h5 class="card-title">Ken Nishimura</h5>
                           <p class="card-text">Japan</p>
-                          <button class="btn btn-primary fs-5 fw-semibold px-5">Select</button>
+                          <button onclick="addToList(this)" class="btn btn-primary fs-5 fw-semibold px-5">Select</button>
                         </div>
                       </div>
                 </div>
@@ -113,7 +118,7 @@
                         <div class="card-body">
                           <h5 class="card-title">Thomas Scott</h5>
                           <p class="card-text">America</p>
-                          <button class="btn btn-primary fs-5 fw-semibold px-5">Select</button>
+                          <button onclick="addToList(this)" class="btn btn-primary fs-5 fw-semibold px-5">Select</button>
                         </div>
                       </div>
                     <div class="col card my-card">
@@ -121,7 +126,7 @@
                         <div class="card-body">
                           <h5 class="card-title">Steven De Costa</h5>
                           <p class="card-text">France</p>
-                          <button class="btn btn-primary fs-5 fw-semibold px-5">Select</button>
+                          <button onclick="addToList(this)" class="btn btn-primary fs-5 fw-semibold px-5">Select</button>
                         </div>
                       </div>
                     <div class="col card my-card">
@@ -129,7 +134,7 @@
                         <div class="card-body">
                           <h5 class="card-title">Amir Mehdizadeh</h5>
                           <p class="card-text">Iran</p>
-                          <button class="btn btn-primary fs-5 fw-semibold px-5">Select</button>
+                          <button onclick="addToList(this)" class="btn btn-primary fs-5 fw-semibold px-5">Select</button>
                         </div>
                       </div>
                 </div>
@@ -142,9 +147,22 @@
                     <div class="col g-4">
                         <div class="row mb-4">
                             <div class="col">
-                                <div class="card my-card"  style="min-height: 450px;">
-                                    <h4 class="text-center mt-3" style="color: white;">Selected List</h4>
+                                <div class="card my-card"  >
                                     
+                                    <!-- <div class="m-3">
+                                        <ol id="players-list" class="fs-4 fw-semibold text-white">
+                                            
+                                        </ol>
+                                    </div> -->
+                                    <table class="m-3">
+                                        <thead><h4 class="text-center mt-3" style="color: white;">Selected List</h4></thead>
+                                        <tbody id="players-list">
+                                            <tr>
+                                                
+                                            </tr>
+                                        </tbody>
+
+                                    </table>
                                 </div>
                               </div>
                         </div>
@@ -152,7 +170,7 @@
                         <div class="row">
                             <div class="col">
                                 <div class="card my-card"  style="min-height: 450px;">
-                                    <h4 class="text-center mt-3" style="color: white;">Selected List</h4>
+                                    <h4 class="text-center mt-3" style="color: white;">Budget</h4>
                                 </div>
                               </div>
                         </div>
